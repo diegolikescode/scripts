@@ -20,6 +20,9 @@
 
 ## :first_quarter_moon: NEXT TODOS 
 
+* [ ] implement organization of the downloads folder
+* [ ] check if the implementation works and fix errors
+
 </br>
 
 <img alt="JinxedFixed" src="./git_assets/jinxfix.gif" />
