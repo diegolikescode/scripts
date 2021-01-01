@@ -11,4 +11,4 @@ for root, dirs, files in os.walk(stuff):
 
 print(allDirs)
 for directory in allDirs:
-  os.system('cd {0} & call git status & git add . & git commit -m "test: script to commit everything & git push"'.format(directory))
+  os.system('cd {0} & call git status & call git add . & call git commit -m "test: script to commit everything & call git push"'.format(directory))
