@@ -1,4 +1,3 @@
-# This one will walk through the root dir and commiting every repo that is in the dir that this file is.
 import os
 
 depth = 1
