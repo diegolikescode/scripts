@@ -1,0 +1,103 @@
+LEMBRETES E COMANDOS DO GITHUB
+
+GIT FUNCIONA:
+
+PROJETO -> "CONTAINER" -> REPOSITORIO
+
+o git não armazena cópias de projeto, só rastreia as alteraçoes de forma inteligente em forma dos commits e dando "códigos" para cada versão do projeto ao longo das alterações
+
+CONTAINER: INTERMEDIO ENTRE PROJETO E REPOSITORIO, PARA ORGANIZAR MELHOR
+
+git version //vê a versão do git
+git config --global user.name "NOME DO USUARIO" 	//CADASTRA NOME
+git config --global user.email "EMAIL DO USUARIO" 	//CADASTRA EMAIL
+git config --global user.name 						//PRA VER MEU EMAIL
+git config --global user.email 						//PRA VER MEU EMAIL
+git config --global core.editor 					//MOSTRA O EDITOR(IDE)
+code 	//ABRE O VISUAL STUDIO CODE
+code . 	ABRE ARQUIVOS DE CODIGO TODOS NO MEU VS CODE(IDE)
+pwd 	//MOSTRA ONDE EU ESTOU
+cd CAMINHO QUE VC QUER	//ABRE O CAMINHO QUE VC QUER
+clear 	//NO PROMPT DO GIT LIMPA A TELA
+cls 	//NO PROMPT DO WINDOWS LIMPA A TELA
+touch NOME DO ARQUIVO(.extensao) 	//CRIA ARQUIVO
+git status 	//MOSTRA ARQUIVOS NO "CONTAINER" E OS QUE NÃO FORAM COMMITADOS AIINDA
+git add	NOME DO ARQUIVO	//ADICIONA ARQUIVO SELECIONADO
+git add . //COM PONTO NO FINAL ADICIONA TUDO MODIFICADO
+git commit -m "COMENTARIO QUE EU QUISER FAZER	//COMMITA PARA REPOSITORIO
+git log	//IDENTIFICA AUTOR E DATA DO REPOSITORIO
+git log --oneline 	//MOSTRA O LOG MAIS RESUMIDO
+git log --graph 	//MOSTRA O GRAFO DO PROJETO (--graph e oneline podem ser usados juntos
+git commit -am "COMENTARIO"	//DÁ COMMIT SEM PRECISAR ADICIONAR AO CONTAINER
+git branch	//IDENTIFICA O NODE(NÓ, PONTO, VERTICE DO GRAFO) QUE O PROJETO ESTÁ
+git diff	//MOSTRA LINHAS REMOVIDAS/ALTERADAS/ADICIONADAS ANTES DE ENTRAR NO CONTAINER (git add)
+git reset HEAD 		//REMOVE CONTEUDO DO CONTAINER
+git reset --hard CÓDIGO DO COMMIT	//APAGA FULL UM COMMIT, CUIDADO COM ESSE  AQUI
+git checkout -b NOME DA RAMIFICAÇÃO	//CRIA RAMIFICAÇÃO NO PROJETO
+ls		//NO PROMPT DO GIT ELE DA TUDO Q TEM NA PASTA, MENOS ARQUIVOS OCULTOS
+ls -a	//MOSTRA TAMBÉM OS ARQUIVOS OCULTOS
+
+PROCEDIMENTOS:
+
+COMO RASTREAR AS MUDANÇAS DO PROJETO:
+apontar o head para o commit que eu quero:
+$ git checkout CÓDIGO DO COMMIT apontado pelo "git log"
+//acima e voltei para o commit que eu selecionei
+
+PRA SETAR O HEAD ANTERIOR E VOLTAR O MASTER COMO ANTES:
+$ git checkout master
+
+PRA VOLTAR ALTERAÇÕES ANTES DE UM COMMIT:
+git diff
+git status
+
+COMO CRIAR RAMIFICAÇÃO NO PROJETO:
+
+git checkout -b NOME DA RAMIFICAÇÃO	//CRIOU RAMIFICAÇÃO NO CODIGO
+git branch	//VAI DIZER EM QUAL DAS RAMIFICAÇÕES EU ESTOU
+git checkout master(OU O NOME DA RAMIFICACAO Q EU QUERO, POIS O MASTER É SÓ A RAMIFICACAO "PRINCIPAL/DEFAULT")	//FAZ EU IR PARA OUTRA RAMIFICAÇÃO
+
+PARA VER O GRAFO COMPLETO DO PROJETO:
+git log --oneline --graph --all
+
+PARA FAZER A "FUSAO" DOS 2 NODES/RAMOS/NÓS/VERTICES ENFIM... TEMOS QUE ESTAR NO MASTER:
+DEPOIS DE TÁ NO MASTER
+JÁ TO NO MASTER
+git merge NOME DO NÓS/VERTICES
+ai ele vai aponta na IDE(VS CODE) QUE PODEMOS EXCLUIR UMA DAS MUDANÇAS PROPOSTAS OU ACEITAR AS PROPOSTAS DE AMBAS RAMIFICAÇÕES NO GRAFO;
+git status	//PARA VER COMO TÁ, POIS N FOI COMMITADO AINDA
+SE EU QUISER ABORTAR O PROCESSO DE MERGE(JUNÇÃO) EU COLOCO: $ git merge --abort
+git add .	//PARA APLICAR A FUSAO
+
+_________-----------_________----------- GIT + GITHUB---------___________----------------_______---------
+
+PARA CRIAR REPOSITORIO NOVO NO PC:
+git init
+
+PRA ENVIAR/IMPORTAR REPOSITORIO PARA O GITHUB:
+CRIAR REPOSITORIO SEM """"READ ME""""""" MUITO IMPORTANTE, O GITHUB TAMBÉM AVISA SOBRE ISSO
+git remote add origin LINK DO GITHUB, EXEMPLO(git remote add origin https://github.com/LoneRangerRiding/OpenSpace.git)
+git remote -v	//PEGA MAIS DETALHES DO REPOSITORIO
+AS INSTRUÇOES ESTARAM NO GITHUB
+
+PARA ENVIAR UM REPOSITORIO DO GITHUB PRO PC:
+CRIAR UM REPO'' NO GITHUB E MARCAR O "READ ME" E DPS COPIAR O LINK DO REPO'' NO BOTAO "CLONE OR DOWNLOAD"
+git clone (LINK DO REPO'')
+
+PARA ENVIAR MEUS COMMITS DO PC PARA O GITHUB:
+APÓS COMMITAR NORMALMENTE, INSERIR:
+git push	//VAI MANDAR PARA O GITHUB
+
+CASO EU ALTERE NO GITHUB, PARA EU PODER PUXAR AS ALTERAÇÕES BASTA:
+git pull
+
+PARA ENVIAR UM PROJETO DO GITHUB PARA O ECLIPSE:
+Window -> Show View -> Other -> Git -> Repositorio;
+Pegar o link do projeto, n o de clonar, o link do endereço mesmo;
+O repositorio irá aparecer no eclipse;
+CLICAR COM DIREITO NO REPOSITORIO -> IMPORT PROJECTS.
+
+GIT STASH, ANTES DO PULL PARA DEIXAR O CÓDIGO ORIGINAL DE NOVO
+git stash pega tuas alterações e salva num array como um hash e remove do teu projeto ai é só tu dar pull qdo eu atualizar depois do stash
+
+PARA COMMITAR DIRETO DO ECLIPSE
