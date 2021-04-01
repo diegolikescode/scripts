@@ -1,6 +1,6 @@
 <div align="center">
 
-  # TODO TEMPLATE FOR TYPESCRIPT :milky_way:
+  # LITTLE AUTOMATIZATION IDEAS :milky_way:
 
 </div>
 
