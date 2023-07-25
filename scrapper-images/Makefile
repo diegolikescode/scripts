@@ -1,0 +1,2 @@
+dale:
+	python scrapper.py
